@@ -30,6 +30,6 @@ export class TableComponent implements OnInit {
     }
 
     edit(employee: Employee) : void {
-        this.router.navigate(['/edit', employee.id]);
+        // this.router.navigate(['/edit', employee.id]);
     }
 }
