@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h2> Employee management form </h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Step 1 -->
+            <div *ngIf="employee">
+                <h3> Id: {{employee.id}} </h3>
+                <h3> First Name: {{employee.name}} </h3>
+                <h3> Last Name: {{employee.lastName}} </h3>
+                <h3> Email : {{employee.email}} </h3>
+            </div>
+
+            <!-- Step 3 -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- Step 2 -->
+    <employee-table (notify)="edit($event)"></employee-table>
+</div>
